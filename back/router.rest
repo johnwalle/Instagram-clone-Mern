@@ -1,0 +1,96 @@
+#### REGISTER USER
+POST http://localhost:8000/api/users/register
+Content-Type: application/json
+
+{
+    "fullName": "Mollla B",
+    "email": "molla@gmail.com",
+    "username" : "molla",
+    "password" : "Molla1234"
+}
+
+
+
+#### LOGIN USER
+
+POST http://localhost:8000/api/users/login
+Content-Type: application/json
+
+{
+    "emailOrUsername": "work",
+    "password" : "Work1234"
+}
+
+### FOLLOW USER
+
+PUT http://localhost:8000/api/users/follow/6622d34a8b430ac8e86625b4
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2MjJkMmNlOGI0MzBhYzhlODY2MjU2YSIsImlhdCI6MTcxMzU1OTkyOSwiZXhwIjoxNzE2MTUxOTI5fQ.LjcKaW0eufaPMrOtnGfu6Zz5Poo8ITPR5wFOmOXbgJI
+
+### GETTING ALL USERS
+GET http://localhost:8000/api/users
+
+
+### GETTING SINGLE USER
+GET http://localhost:8000/api/users/66204159aeb3fc734144d859
+
+### GETTING FOLLOWERS
+GET http://localhost:8000/api/users/6622d34a8b430ac8e86625b4/followers
+
+### GETTING FOLLOWINGS
+GET http://localhost:8000/api/users/6622d3e38b430ac8e8662613/followings
+
+
+### SEARCH USERS 
+GET http://localhost:8000/api/users/search/users?search=beza
+
+
+
+#### CREATING POSTS
+POST http://localhost:8000/api/posts/create
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2MWQ4YzMyYmQyMzkzN2U2NTczODI1OSIsImlhdCI6MTcxMzI5OTU3OSwiZXhwIjoxNzE1ODkxNTc5fQ.XuOqCzqpUHi6fUVqvE0QES1hynz47x7RHSPLkvZ9e_E
+
+Content-Type: multipart/form-data
+
+
+
+#### EDIT PROFILE
+
+PUT http://localhost:8000/api/users/edit-profile
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2MWQ4YzMyYmQyMzkzN2U2NTczODI1OSIsImlhdCI6MTcxMzM3MDM3OCwiZXhwIjoxNzE1OTYyMzc4fQ.aZswBUUAxIKU5Di7p-NmpOiepxYy21R0JNbMRVOtFkw
+
+{
+    "username": "shek",
+    "fullName" : "Shek",
+    "bio" : "long live for shek"
+    
+}
+
+
+#### GETTING ALL POSTS
+GET http://localhost:8000/api/posts
+
+
+### GETTING AUTHOR POSTS
+GET http://localhost:8000/api/posts/user/661d8c32bd23937e65738259
+
+
+### LIKE POSTS 
+PUT http://localhost:8000/api/posts/like/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2MjAwZjZjZjYzMjRiNTAwNzBlOWE2YyIsImlhdCI6MTcxMzUzOTY5NSwiZXhwIjoxNzE2MTMxNjk1fQ.jXwSnQDbDKaNfL8i-mcbs3h8MOah1jr9t87uuSlWNCQ
+
+##### CREATE COMMENTS
+POST http://localhost:8000/api/6620508b93619751bd5a8d5f/create-comments
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2MjAwZjZjZjYzMjRiNTAwNzBlOWE2YyIsImlhdCI6MTcxMzQ1NDcyMiwiZXhwIjoxNzE2MDQ2NzIyfQ.3LWAFBMuRExjQbvg2KhGMCVbz29HvCyLdYHvwN3O-QE
+
+{
+    "comment" : "lol lol lol ."
+}
+
+
+#### GET POST COMMENTS
+GET http://localhost:8000/api/66200f98f6324b50070e9a7a/comments
+
+
+

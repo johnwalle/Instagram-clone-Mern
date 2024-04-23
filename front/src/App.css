@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+/* Apply the font to the element with the unique class name */
+.heading{
+  font-family: 'Dancing Script', cursive;
+  font-weight: 700;
+}
+
+.instagarm-heading {
+  font-family: "Pacifico", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.active{
+  color: white;
+}
